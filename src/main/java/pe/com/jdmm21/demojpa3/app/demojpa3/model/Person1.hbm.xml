@@ -1,0 +1,13 @@
+<hibernate-mapping>
+    <class name="pe.com.jdmm21.demojpa3.app.demojpa3.model.Person1" table="person">
+        <id name="personId" column="id">
+            <generator class="increment"/>
+        </id>
+        <property name="personName" column="personname"/>
+        <property name="personLastname" column="personlastname"/>
+        <set name="addresses" table="address">
+            <key column="id"/>
+            <element type = "string" column="direction"/>
+        </set>
+    </class>
+</hibernate-mapping>
