@@ -2,17 +2,13 @@ package pe.com.jdmm21.demojpa3.app.demojpa3.model;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
 
 @SuppressWarnings("all")
-public class Person1 {
-
+public class Person3 {
     private int personId;
     private String personName;
     private String personLastname;
-    private Set addresses = new HashSet<>();
-    //
+    private Collection nombrex = new ArrayList<>();
 
     /**
      * @return int return the personId
@@ -57,16 +53,17 @@ public class Person1 {
     }
 
     /**
-     * @return Set return the addresses
+     * @return Collection return the nombrex
      */
-    public Set getAddresses() {
-        return addresses;
+    public Collection getNombrex() {
+        return nombrex;
     }
 
     /**
-     * @param addresses the addresses to set
+     * @param nombrex the nombrex to set
      */
-    public void setAddresses(Set addresses) {
-        this.addresses = addresses;
+    public void setNombrex(Collection nombrex) {
+        this.nombrex = nombrex;
     }
+
 }

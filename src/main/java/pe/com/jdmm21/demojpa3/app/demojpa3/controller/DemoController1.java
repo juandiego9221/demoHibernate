@@ -19,4 +19,9 @@ public class DemoController1 {
         return ResponseEntity.ok(session.createQuery("select p from Person1 p").getResultList());
     }
 
+    @GetMapping("/test2")
+    private ResponseEntity<?> hibernateTest2() {
+        return ResponseEntity.ok(session.createQuery("select p from Person3 p").getResultList());
+    }
+
 }
