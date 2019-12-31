@@ -12,7 +12,7 @@ public class Person1 {
     private String personName;
     private String personLastname;
     private Set addresses = new HashSet<>();
-    //
+    private Collection addresse1 = new ArrayList<>();
 
     /**
      * @return int return the personId
@@ -69,4 +69,19 @@ public class Person1 {
     public void setAddresses(Set addresses) {
         this.addresses = addresses;
     }
+
+    /**
+     * @return Collection return the addresse1
+     */
+    public Collection getAddresse1() {
+        return addresse1;
+    }
+
+    /**
+     * @param addresse1 the addresse1 to set
+     */
+    public void setAddresse1(Collection addresse1) {
+        this.addresse1 = addresse1;
+    }
+
 }

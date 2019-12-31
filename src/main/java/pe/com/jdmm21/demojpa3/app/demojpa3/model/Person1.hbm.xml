@@ -9,5 +9,9 @@
             <key column="id"/>
             <element type="string" column="direction"/>
         </set>
+        <bag name="addresse1" table="address1">
+            <key column="id"/>
+            <element type="string" column="direction"/>
+        </bag>
     </class>
 </hibernate-mapping>
