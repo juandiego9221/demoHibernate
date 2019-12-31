@@ -3,6 +3,7 @@ package pe.com.jdmm21.demojpa3.app.demojpa3.model;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @SuppressWarnings("all")
@@ -13,6 +14,7 @@ public class Person1 {
     private String personLastname;
     private Set addresses = new HashSet<>();
     private Collection addresse1 = new ArrayList<>();
+    private List addresses2 = new ArrayList<>();
 
     /**
      * @return int return the personId
@@ -82,6 +84,20 @@ public class Person1 {
      */
     public void setAddresse1(Collection addresse1) {
         this.addresse1 = addresse1;
+    }
+
+    /**
+     * @return List return the addresses2
+     */
+    public List getAddresses2() {
+        return addresses2;
+    }
+
+    /**
+     * @param addresses2 the addresses2 to set
+     */
+    public void setAddresses2(List addresses2) {
+        this.addresses2 = addresses2;
     }
 
 }

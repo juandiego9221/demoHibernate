@@ -13,5 +13,10 @@
             <key column="id"/>
             <element type="string" column="direction"/>
         </bag>
+        <list name = "addresses2" table = "address2">
+            <key column = "id"></key>
+            <list-index column = "position"></list-index>
+            <element type = "string" column = "direction"></element>
+        </list>
     </class>
 </hibernate-mapping>
