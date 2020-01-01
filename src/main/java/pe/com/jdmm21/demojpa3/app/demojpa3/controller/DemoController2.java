@@ -14,8 +14,8 @@ public class DemoController2 {
     @Autowired
     EntityManager entityManager;
 
-    @GetMapping("/test2")
-    private ResponseEntity<?> hibernateTest1() {
+    @GetMapping("/jpa1")
+    private ResponseEntity<?> jpaTest1() {
         return ResponseEntity.ok(entityManager.createQuery("select p from persona1 p").getResultList());
     }
 

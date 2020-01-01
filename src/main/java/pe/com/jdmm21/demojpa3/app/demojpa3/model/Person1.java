@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @SuppressWarnings("all")
 public class Person1 {
 
@@ -18,6 +20,7 @@ public class Person1 {
     private Collection addresse1 = new ArrayList<>();
     private List addresses2 = new ArrayList<>();
     private Map addresses3 = new HashMap<>();
+    @JsonIgnore
     private Phone1 phone1;
 
     /**

@@ -1,9 +1,6 @@
 package pe.com.jdmm21.demojpa3.app.demojpa3.controller;
 
-import javax.persistence.EntityManager;
-
 import org.hibernate.Session;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +17,11 @@ public class DemoController1 {
     @GetMapping("/test1")
     private ResponseEntity<?> hibernateTest1() {
         return ResponseEntity.ok(session.createQuery("select p from Person1 p").getResultList());
+    }
+
+    @GetMapping("/test2")
+    private ResponseEntity<?> hibernateTest2() {
+        return ResponseEntity.ok(session.createQuery("select ph from Phone1 ph").getResultList());
     }
 
 }

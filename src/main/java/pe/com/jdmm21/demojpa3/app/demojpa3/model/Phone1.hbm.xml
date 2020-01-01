@@ -4,5 +4,8 @@
             <generator class="increment"/>
         </id>
         <property name="phoneNumber" column="phonenumber"/>
+        <one-to-one name="person1"
+            class="pe.com.jdmm21.demojpa3.app.demojpa3.model.Person1"
+            cascade="all"/>
     </class>
 </hibernate-mapping>

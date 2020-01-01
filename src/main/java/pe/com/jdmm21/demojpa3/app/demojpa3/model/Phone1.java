@@ -3,6 +3,7 @@ package pe.com.jdmm21.demojpa3.app.demojpa3.model;
 public class Phone1 {
     private int id;
     private String phoneNumber;
+    private Person1 person1;
 
     /**
      * @return String return the phoneNumber
@@ -30,6 +31,20 @@ public class Phone1 {
      */
     public void setId(int id) {
         this.id = id;
+    }
+
+    /**
+     * @return Person1 return the person1
+     */
+    public Person1 getPerson1() {
+        return person1;
+    }
+
+    /**
+     * @param person1 the person1 to set
+     */
+    public void setPerson1(Person1 person1) {
+        this.person1 = person1;
     }
 
 }
