@@ -20,6 +20,8 @@ import javax.persistence.MapKey;
 import javax.persistence.MapKeyClass;
 import javax.persistence.MapKeyColumn;
 import javax.persistence.MapKeyJoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.IndexColumn;
@@ -50,7 +52,10 @@ public class Person1 {
     @ElementCollection(targetClass = String.class)
     @JoinTable(name = "address3", joinColumns = @JoinColumn(name = "id"))
     @MapKeyColumn(name = "directionkey")
-    private Map<Integer,String> addresses3 = new HashMap();
+    private Map<Integer, String> addresses3 = new HashMap();
+    @OneToOne
+    @PrimaryKeyJoinColumn
+    private Phone1 phone1;
 
     /**
      * @return int return the id
@@ -134,6 +139,20 @@ public class Person1 {
      */
     public void setAddresses3(Map addresses3) {
         this.addresses3 = addresses3;
+    }
+
+    /**
+     * @return Phone1 return the phone1
+     */
+    public Phone1 getPhone1() {
+        return phone1;
+    }
+
+    /**
+     * @param phone1 the phone1 to set
+     */
+    public void setPhone1(Phone1 phone1) {
+        this.phone1 = phone1;
     }
 
 }
