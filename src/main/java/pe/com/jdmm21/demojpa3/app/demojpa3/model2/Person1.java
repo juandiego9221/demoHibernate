@@ -2,8 +2,10 @@ package pe.com.jdmm21.demojpa3.app.demojpa3.model2;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -14,9 +16,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.MapKey;
+import javax.persistence.MapKeyClass;
+import javax.persistence.MapKeyColumn;
+import javax.persistence.MapKeyJoinColumn;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.IndexColumn;
+import org.hibernate.annotations.MapKeyType;
 
 @Entity(name = "persona1")
 @Table(name = "person")
@@ -35,10 +42,15 @@ public class Person1 {
     @JoinTable(name = "address", joinColumns = @JoinColumn(name = "id"))
     private Set addresses = new HashSet<>();
     @Column(name = "direction")
-    @JoinTable(name = "address2",joinColumns = @JoinColumn(name = "id"))
+    @JoinTable(name = "address2", joinColumns = @JoinColumn(name = "id"))
     @ElementCollection(targetClass = String.class)
     @IndexColumn(name = "position")
     private List addresses2 = new ArrayList<>();
+    @Column(name = "direction")
+    @ElementCollection(targetClass = String.class)
+    @JoinTable(name = "address3", joinColumns = @JoinColumn(name = "id"))
+    @MapKeyColumn(name = "directionkey")
+    private Map<Integer,String> addresses3 = new HashMap();
 
     /**
      * @return int return the id
@@ -108,6 +120,20 @@ public class Person1 {
      */
     public void setAddresses2(List addresses2) {
         this.addresses2 = addresses2;
+    }
+
+    /**
+     * @return Map return the addresses3
+     */
+    public Map getAddresses3() {
+        return addresses3;
+    }
+
+    /**
+     * @param addresses3 the addresses3 to set
+     */
+    public void setAddresses3(Map addresses3) {
+        this.addresses3 = addresses3;
     }
 
 }
