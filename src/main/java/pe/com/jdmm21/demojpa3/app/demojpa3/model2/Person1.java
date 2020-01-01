@@ -24,6 +24,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import org.hibernate.annotations.IndexColumn;
 import org.hibernate.annotations.MapKeyType;
 
@@ -55,6 +57,7 @@ public class Person1 {
     private Map<Integer, String> addresses3 = new HashMap();
     @OneToOne
     @PrimaryKeyJoinColumn
+    @JsonIgnore
     private Phone1 phone1;
 
     /**
