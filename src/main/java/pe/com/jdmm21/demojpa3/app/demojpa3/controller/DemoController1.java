@@ -21,7 +21,12 @@ public class DemoController1 {
 
     @GetMapping("/test2")
     private ResponseEntity<?> hibernateTest2() {
-        return ResponseEntity.ok(session.createQuery("select ph from Phone1 ph").getResultList());
+        return ResponseEntity.ok(session.createQuery("select ph1 from Phone1 ph1").getResultList());
+    }
+
+    @GetMapping("/test3")
+    private ResponseEntity<?> hibernateTest3() {
+        return ResponseEntity.ok(session.createQuery("select ph2 from Phone2 ph2").getResultList());
     }
 
 }

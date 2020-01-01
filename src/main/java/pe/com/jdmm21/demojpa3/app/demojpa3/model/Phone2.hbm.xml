@@ -1,0 +1,11 @@
+<hibernate-mapping>
+    <class name="pe.com.jdmm21.demojpa3.app.demojpa3.model.Phone2" table="phone1">
+        <id name="id" column="phoneid">
+            <generator class="increment"/>
+        </id>
+        <property name="phoneNumber" column="phonenumber"/>
+        <many-to-one name="person1"
+            class="pe.com.jdmm21.demojpa3.app.demojpa3.model.Person1"
+            column="id" unique="true"/>
+    </class>
+</hibernate-mapping>
