@@ -2,8 +2,10 @@ package pe.com.jdmm21.demojpa3.app.demojpa3.model;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 @SuppressWarnings("all")
@@ -15,6 +17,7 @@ public class Person1 {
     private Set addresses = new HashSet<>();
     private Collection addresse1 = new ArrayList<>();
     private List addresses2 = new ArrayList<>();
+    private Map addresses3 = new HashMap<>();
 
     /**
      * @return int return the personId
@@ -98,6 +101,20 @@ public class Person1 {
      */
     public void setAddresses2(List addresses2) {
         this.addresses2 = addresses2;
+    }
+
+    /**
+     * @return Map return the addresses3
+     */
+    public Map getAddresses3() {
+        return addresses3;
+    }
+
+    /**
+     * @param addresses3 the addresses3 to set
+     */
+    public void setAddresses3(Map addresses3) {
+        this.addresses3 = addresses3;
     }
 
 }

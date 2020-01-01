@@ -18,5 +18,10 @@
             <list-index column = "position"></list-index>
             <element type = "string" column = "direction"></element>
         </list>
+        <map name = "addresses3" table = "address3">
+            <key column = "id"></key>
+            <map-key column = "directionkey" type = "int"></map-key>
+            <element type = "string" column = "direction"></element>
+        </map>
     </class>
 </hibernate-mapping>
