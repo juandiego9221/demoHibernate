@@ -1,6 +1,8 @@
 <hibernate-mapping>
     <class name="pe.com.jdmm21.demojpa3.app.demojpa3.model.Person1" table="person">
-        <id name="personId" column="id">
+        <!--MAPEO DE COLECIONES -->
+
+        <id name="id" column="id">
             <generator class="increment"/>
         </id>
         <property name="personName" column="personname"/>
@@ -13,15 +15,21 @@
             <key column="id"/>
             <element type="string" column="direction"/>
         </bag>
-        <list name = "addresses2" table = "address2">
-            <key column = "id"></key>
-            <list-index column = "position"></list-index>
-            <element type = "string" column = "direction"></element>
+        <list name="addresses2" table="address2">
+            <key column="id"/>
+            <list-index column="position"/>
+            <element type="string" column="direction"/>
         </list>
-        <map name = "addresses3" table = "address3">
-            <key column = "id"></key>
-            <map-key column = "directionkey" type = "int"></map-key>
-            <element type = "string" column = "direction"></element>
+        <map name="addresses3" table="address3">
+            <key column="id"/>
+            <map-key column="directionkey" type="int"/>
+            <element type="string" column="direction"/>
         </map>
+
+        <!--MAPEO RELACIONAL DE  OBJETOS -->
+        <one-to-one name="phone1"
+            class="pe.com.jdmm21.demojpa3.app.demojpa3.model.Phone1"
+            cascade="all"
+            lazy="false"/>
     </class>
 </hibernate-mapping>

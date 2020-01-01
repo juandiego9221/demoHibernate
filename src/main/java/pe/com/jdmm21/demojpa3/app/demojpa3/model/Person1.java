@@ -11,27 +11,14 @@ import java.util.Set;
 @SuppressWarnings("all")
 public class Person1 {
 
-    private int personId;
+    private int id;
     private String personName;
     private String personLastname;
     private Set addresses = new HashSet<>();
     private Collection addresse1 = new ArrayList<>();
     private List addresses2 = new ArrayList<>();
     private Map addresses3 = new HashMap<>();
-
-    /**
-     * @return int return the personId
-     */
-    public int getPersonId() {
-        return personId;
-    }
-
-    /**
-     * @param personId the personId to set
-     */
-    public void setPersonId(int personId) {
-        this.personId = personId;
-    }
+    private Phone1 phone1;
 
     /**
      * @return String return the personName
@@ -115,6 +102,34 @@ public class Person1 {
      */
     public void setAddresses3(Map addresses3) {
         this.addresses3 = addresses3;
+    }
+
+    /**
+     * @return Phone1 return the phone1
+     */
+    public Phone1 getPhone1() {
+        return phone1;
+    }
+
+    /**
+     * @param phone1 the phone1 to set
+     */
+    public void setPhone1(Phone1 phone1) {
+        this.phone1 = phone1;
+    }
+
+    /**
+     * @return int return the id
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(int id) {
+        this.id = id;
     }
 
 }
