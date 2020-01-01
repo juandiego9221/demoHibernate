@@ -15,7 +15,6 @@ public class DBConfiguration {
         return configuration;
     }
 
-    @Bean
     SessionFactory getSessionFactory(){
         SessionFactory sessionFactory = getconfiguration().buildSessionFactory();
         return sessionFactory;

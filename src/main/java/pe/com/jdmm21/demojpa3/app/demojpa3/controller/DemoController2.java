@@ -2,24 +2,22 @@ package pe.com.jdmm21.demojpa3.app.demojpa3.controller;
 
 import javax.persistence.EntityManager;
 
-import org.hibernate.Session;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class DemoController1 {
+public class DemoController2 {
+    @Qualifier(value = "eManager")
+    @Autowired
+    EntityManager entityManager;
 
-    Session session;
-
-    DemoController1(Session session) {
-        this.session = session;
-    }
-
-    @GetMapping("/test1")
+    @GetMapping("/test2")
     private ResponseEntity<?> hibernateTest1() {
-        return ResponseEntity.ok(session.createQuery("select p from Person1 p").getResultList());
+        return ResponseEntity.ok(entityManager.createQuery("select p from persona1 p").getResultList());
     }
 
+    
 }
