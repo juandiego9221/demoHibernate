@@ -16,6 +16,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.ManyToOne;
 import javax.persistence.MapKey;
 import javax.persistence.MapKeyClass;
 import javax.persistence.MapKeyColumn;
@@ -59,6 +60,9 @@ public class Person1 {
     @PrimaryKeyJoinColumn
     @JsonIgnore
     private Phone1 phone1;
+    @ManyToOne
+    @JoinColumn(name = "courseid_fk")
+    private Course1 course1;
 
     /**
      * @return int return the id
@@ -156,6 +160,20 @@ public class Person1 {
      */
     public void setPhone1(Phone1 phone1) {
         this.phone1 = phone1;
+    }
+
+    /**
+     * @return Course1 return the course1
+     */
+    public Course1 getCourse1() {
+        return course1;
+    }
+
+    /**
+     * @param course1 the course1 to set
+     */
+    public void setCourse1(Course1 course1) {
+        this.course1 = course1;
     }
 
 }
