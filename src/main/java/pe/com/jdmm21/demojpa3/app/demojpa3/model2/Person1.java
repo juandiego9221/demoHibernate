@@ -21,6 +21,7 @@ import javax.persistence.MapKey;
 import javax.persistence.MapKeyClass;
 import javax.persistence.MapKeyColumn;
 import javax.persistence.MapKeyJoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
@@ -63,6 +64,8 @@ public class Person1 {
     @ManyToOne
     @JoinColumn(name = "courseid_fk")
     private Course1 course1;
+    @OneToMany(mappedBy = "person1")
+    private List<Game1> games1 = new ArrayList<>();
 
     /**
      * @return int return the id
@@ -174,6 +177,20 @@ public class Person1 {
      */
     public void setCourse1(Course1 course1) {
         this.course1 = course1;
+    }
+
+    /**
+     * @return List<Game1> return the games1
+     */
+    public List<Game1> getGames1() {
+        return games1;
+    }
+
+    /**
+     * @param games1 the games1 to set
+     */
+    public void setGames1(List<Game1> games1) {
+        this.games1 = games1;
     }
 
 }
