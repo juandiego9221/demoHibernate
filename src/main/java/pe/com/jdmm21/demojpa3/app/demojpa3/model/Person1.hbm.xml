@@ -39,5 +39,14 @@
             <key column="id"/>
             <one-to-many class="pe.com.jdmm21.demojpa3.app.demojpa3.model.Game1"/>
         </bag>
+        <bag name="goals1"
+            cascade="all"
+            table="person_goal"
+            lazy="false">
+            <key column="pk_persoid"/>
+            <many-to-many
+                class="pe.com.jdmm21.demojpa3.app.demojpa3.model.Goal1"
+                column="pr_goal_id"/>
+        </bag>
     </class>
 </hibernate-mapping>

@@ -24,6 +24,7 @@ public class Person1 {
     private Phone1 phone1;
     private Course1 course1;
     private List<Game1> games1 = new ArrayList<>();
+    private List<Goal1> goals1 = new ArrayList<>();
 
     /**
      * @return String return the personName
@@ -163,6 +164,20 @@ public class Person1 {
      */
     public void setGames1(List<Game1> games1) {
         this.games1 = games1;
+    }
+
+    /**
+     * @return List<Goal1> return the goals1
+     */
+    public List<Goal1> getGoals1() {
+        return goals1;
+    }
+
+    /**
+     * @param goals1 the goals1 to set
+     */
+    public void setGoals1(List<Goal1> goals1) {
+        this.goals1 = goals1;
     }
 
 }
