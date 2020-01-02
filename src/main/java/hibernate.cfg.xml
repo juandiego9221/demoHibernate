@@ -12,6 +12,7 @@
     <property name="show_sql">true</property>
     <property name="pool_size">5</property>
     <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="format_sql">true</property>
     <!-- mapping files -->
     <mapping resource="pe/com/jdmm21/demojpa3/app/demojpa3/model/Person1.hbm.xml"/>
     <mapping resource="pe/com/jdmm21/demojpa3/app/demojpa3/model/Phone1.hbm.xml"/>
