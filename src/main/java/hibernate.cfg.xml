@@ -16,6 +16,8 @@
     <mapping resource="pe/com/jdmm21/demojpa3/app/demojpa3/model/Person1.hbm.xml"/>
     <mapping resource="pe/com/jdmm21/demojpa3/app/demojpa3/model/Phone1.hbm.xml"/>
     <mapping resource="pe/com/jdmm21/demojpa3/app/demojpa3/model/Phone2.hbm.xml"/>
+    <mapping resource="pe/com/jdmm21/demojpa3/app/demojpa3/model/Course1.hbm.xml"/>
+
 
 
   </session-factory>

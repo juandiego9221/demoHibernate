@@ -31,5 +31,9 @@
             class="pe.com.jdmm21.demojpa3.app.demojpa3.model.Phone1"
             cascade="all"
             lazy="false"/>
+
+        <many-to-one name="course1"
+            column="courseid_fk"
+            cascade="all"/>
     </class>
 </hibernate-mapping>

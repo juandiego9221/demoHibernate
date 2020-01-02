@@ -23,6 +23,8 @@ public class Person1 {
     @JsonIgnore
     private Phone1 phone1;
 
+    private Course1 course1;
+
     /**
      * @return String return the personName
      */
@@ -133,6 +135,20 @@ public class Person1 {
      */
     public void setId(int id) {
         this.id = id;
+    }
+
+    /**
+     * @return Course1 return the course1
+     */
+    public Course1 getCourse1() {
+        return course1;
+    }
+
+    /**
+     * @param course1 the course1 to set
+     */
+    public void setCourse1(Course1 course1) {
+        this.course1 = course1;
     }
 
 }
