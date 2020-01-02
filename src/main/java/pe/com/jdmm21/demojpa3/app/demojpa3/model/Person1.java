@@ -22,8 +22,8 @@ public class Person1 {
     private Map addresses3 = new HashMap<>();
     @JsonIgnore
     private Phone1 phone1;
-
     private Course1 course1;
+    private List<Game1> games1 = new ArrayList<>();
 
     /**
      * @return String return the personName
@@ -149,6 +149,20 @@ public class Person1 {
      */
     public void setCourse1(Course1 course1) {
         this.course1 = course1;
+    }
+
+    /**
+     * @return List<Game1> return the games1
+     */
+    public List<Game1> getGames1() {
+        return games1;
+    }
+
+    /**
+     * @param games1 the games1 to set
+     */
+    public void setGames1(List<Game1> games1) {
+        this.games1 = games1;
     }
 
 }

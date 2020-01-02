@@ -1,0 +1,8 @@
+<hibernate-mapping>
+    <class name="pe.com.jdmm21.demojpa3.app.demojpa3.model.Game1" table="game">
+        <id name="gameId" column="gameid">
+            <generator class="increment"/>
+        </id>
+        <property name="gameName" column="gamename"/>
+    </class>
+</hibernate-mapping>

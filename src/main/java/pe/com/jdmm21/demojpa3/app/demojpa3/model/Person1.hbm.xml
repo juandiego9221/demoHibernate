@@ -35,5 +35,9 @@
         <many-to-one name="course1"
             column="courseid_fk"
             cascade="all"/>
+        <bag name="games1" cascade="all">
+            <key column="id"/>
+            <one-to-many class="pe.com.jdmm21.demojpa3.app.demojpa3.model.Game1"/>
+        </bag>
     </class>
 </hibernate-mapping>

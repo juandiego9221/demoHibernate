@@ -16,7 +16,8 @@ public class DemoController1 {
 
     @GetMapping("/test1")
     private ResponseEntity<?> hibernateTest1() {
-        return ResponseEntity.ok(session.createQuery("select p from Person1 p join fetch p.course1").getResultList());
+        String query = "select p from Person1 p join fetch p.course1 join fetch p.games1";
+        return ResponseEntity.ok(session.createQuery(query).getResultList());
     }
 
     @GetMapping("/test2")
