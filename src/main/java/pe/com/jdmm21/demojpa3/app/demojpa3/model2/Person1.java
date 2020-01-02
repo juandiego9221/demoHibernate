@@ -67,6 +67,7 @@ public class Person1 {
     private Course1 course1;
     @OneToMany(mappedBy = "person1")
     private List<Game1> games1 = new ArrayList<>();
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "person_goal", joinColumns = {
             @JoinColumn(name = "pk_persoid") }, inverseJoinColumns = @JoinColumn(name = "pr_goal_id"))

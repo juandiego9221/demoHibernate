@@ -28,5 +28,10 @@ public class DemoController2 {
     private ResponseEntity<?> jpaTest3() {
         return ResponseEntity.ok(entityManager.createQuery("select t2 from telefono2 t2").getResultList());
     }
+
+    @GetMapping("/jpa4")
+    private ResponseEntity<?> jpaTest4() {
+        return ResponseEntity.ok(entityManager.createQuery("select m from meta1 m").getResultList());
+    }
     
 }
