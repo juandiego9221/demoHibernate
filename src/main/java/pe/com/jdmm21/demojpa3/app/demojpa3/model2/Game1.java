@@ -2,7 +2,6 @@ package pe.com.jdmm21.demojpa3.app.demojpa3.model2;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;

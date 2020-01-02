@@ -16,6 +16,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.MapKey;
 import javax.persistence.MapKeyClass;
@@ -66,6 +67,10 @@ public class Person1 {
     private Course1 course1;
     @OneToMany(mappedBy = "person1")
     private List<Game1> games1 = new ArrayList<>();
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "person_goal", joinColumns = {
+            @JoinColumn(name = "pk_persoid") }, inverseJoinColumns = @JoinColumn(name = "pr_goal_id"))
+    private List<Goal1> goals1 = new ArrayList<>();
 
     /**
      * @return int return the id
@@ -191,6 +196,20 @@ public class Person1 {
      */
     public void setGames1(List<Game1> games1) {
         this.games1 = games1;
+    }
+
+    /**
+     * @return List<Goal1> return the goals1
+     */
+    public List<Goal1> getGoals1() {
+        return goals1;
+    }
+
+    /**
+     * @param goals1 the goals1 to set
+     */
+    public void setGoals1(List<Goal1> goals1) {
+        this.goals1 = goals1;
     }
 
 }
