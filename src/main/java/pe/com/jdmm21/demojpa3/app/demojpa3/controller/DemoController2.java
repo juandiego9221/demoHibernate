@@ -16,7 +16,8 @@ public class DemoController2 {
 
     @GetMapping("/jpa1")
     private ResponseEntity<?> jpaTest1() {
-        return ResponseEntity.ok(entityManager.createQuery("select p from persona1 p join fetch p.course1").getResultList());
+        return ResponseEntity
+                .ok(entityManager.createQuery("select p from persona1 p join fetch p.course1").getResultList());
     }
 
     @GetMapping("/jpa2")
@@ -33,5 +34,5 @@ public class DemoController2 {
     private ResponseEntity<?> jpaTest4() {
         return ResponseEntity.ok(entityManager.createQuery("select m from meta1 m").getResultList());
     }
-    
+
 }

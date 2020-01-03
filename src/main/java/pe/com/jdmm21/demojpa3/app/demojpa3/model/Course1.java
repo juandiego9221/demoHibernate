@@ -5,20 +5,6 @@ public class Course1 {
     private String courseName;
 
     /**
-     * @return int return the courseId
-     */
-    public int getCourseId() {
-        return courseId;
-    }
-
-    /**
-     * @param courseId the courseId to set
-     */
-    public void setCourseId(int courseId) {
-        this.courseId = courseId;
-    }
-
-    /**
      * @return String return the courseName
      */
     public String getCourseName() {
@@ -30,6 +16,20 @@ public class Course1 {
      */
     public void setCourseName(String courseName) {
         this.courseName = courseName;
+    }
+
+    /**
+     * @return int return the courseId
+     */
+    public int getCourseId() {
+        return courseId;
+    }
+
+    /**
+     * @param courseId the courseId to set
+     */
+    public void setCourseId(int courseId) {
+        this.courseId = courseId;
     }
 
 }
