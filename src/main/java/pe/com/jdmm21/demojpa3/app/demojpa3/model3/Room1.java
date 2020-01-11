@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
@@ -21,6 +23,9 @@ public class Room1 {
     private Ocuppant1 ocuppant1;
     @OneToMany(mappedBy = "roomId")
     private List<Ocuppant2> ocuppant2s;
+    @ManyToOne
+    @JoinColumn(name = "ocuppandid")
+    private Ocuppant3 ocuppant3;
 
     /**
      * @return RoomId return the roomId
@@ -90,6 +95,20 @@ public class Room1 {
      */
     public void setOcuppant2s(List<Ocuppant2> ocuppant2s) {
         this.ocuppant2s = ocuppant2s;
+    }
+
+    /**
+     * @return Ocuppant3 return the ocuppant3
+     */
+    public Ocuppant3 getOcuppant3() {
+        return ocuppant3;
+    }
+
+    /**
+     * @param ocuppant3 the ocuppant3 to set
+     */
+    public void setOcuppant3(Ocuppant3 ocuppant3) {
+        this.ocuppant3 = ocuppant3;
     }
 
 }
