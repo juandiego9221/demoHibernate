@@ -1,7 +1,10 @@
 package pe.com.jdmm21.demojpa3.app.demojpa3.model3;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
@@ -16,6 +19,8 @@ public class Room1 {
     @OneToOne
     @PrimaryKeyJoinColumn
     private Ocuppant1 ocuppant1;
+    @OneToMany(mappedBy = "roomId")
+    private List<Ocuppant2> ocuppant2s;
 
     /**
      * @return RoomId return the roomId
@@ -71,6 +76,20 @@ public class Room1 {
      */
     public void setOcuppant1(Ocuppant1 ocuppant1) {
         this.ocuppant1 = ocuppant1;
+    }
+
+    /**
+     * @return List<Ocuppant2> return the ocuppant2s
+     */
+    public List<Ocuppant2> getOcuppant2s() {
+        return ocuppant2s;
+    }
+
+    /**
+     * @param ocuppant2s the ocuppant2s to set
+     */
+    public void setOcuppant2s(List<Ocuppant2> ocuppant2s) {
+        this.ocuppant2s = ocuppant2s;
     }
 
 }

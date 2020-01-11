@@ -17,20 +17,21 @@ public class DemoController3 {
 
     @GetMapping("/testHibernate1")
     public ResponseEntity<?> test1(){
+        //OTO OTM
         Session session = HibernateUtil.getSessionFactory().openSession();
         List<Room1> response = session.createQuery("select r from Room1 r").getResultList();
         return ResponseEntity.ok(response);
     }
 
     @GetMapping("/testHibernate2")
-    public ResponseEntity<?> test2(){
+    public ResponseEntity<?> testOTO(){
         Session session = HibernateUtil.getSessionFactory().openSession();
         List<Car> response = session.createQuery("select c from Car c").getResultList();
         return ResponseEntity.ok(response);
     }
 
     @GetMapping("/testHibernate3")
-    public ResponseEntity<?> test3(){
+    public ResponseEntity<?> testOTOB(){
         Session session = HibernateUtil.getSessionFactory().openSession();
         List<Engine> response = session.createQuery("select e from Engine e").getResultList();
         return ResponseEntity.ok(response);
