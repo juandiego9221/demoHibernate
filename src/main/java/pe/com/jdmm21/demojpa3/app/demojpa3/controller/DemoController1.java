@@ -1,12 +1,9 @@
 package pe.com.jdmm21.demojpa3.app.demojpa3.controller;
 
 import org.hibernate.Session;
-import org.hibernate.Transaction;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import pe.com.jdmm21.demojpa3.app.demojpa3.model.Course1;
 
 @Controller
 public class DemoController1 {
