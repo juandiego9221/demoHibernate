@@ -11,6 +11,8 @@ import pe.com.jdmm21.demojpa3.app.demojpa3.model3.Ocuppant1;
 import pe.com.jdmm21.demojpa3.app.demojpa3.model3.Ocuppant2;
 import pe.com.jdmm21.demojpa3.app.demojpa3.model3.Ocuppant3;
 import pe.com.jdmm21.demojpa3.app.demojpa3.model3.Room1;
+import pe.com.jdmm21.demojpa3.app.demojpa3.model3.Student1;
+import pe.com.jdmm21.demojpa3.app.demojpa3.model3.Teacher1;
 
 public class HibernateUtil {
     private final static Logger logger = LoggerFactory.getLogger(HibernateUtil.class);
@@ -19,7 +21,7 @@ public class HibernateUtil {
     private static SessionFactory buildSessionFactory() {
         try {
             Configuration configuration = new Configuration().configure("/hibernate.cfg.xml")
-                    .addAnnotatedClass(Room1.class).addAnnotatedClass(Ocuppant1.class).addAnnotatedClass(Car.class).addAnnotatedClass(Engine.class).addAnnotatedClass(Ocuppant2.class).addAnnotatedClass(Ocuppant3.class);
+                    .addAnnotatedClass(Room1.class).addAnnotatedClass(Ocuppant1.class).addAnnotatedClass(Car.class).addAnnotatedClass(Engine.class).addAnnotatedClass(Ocuppant2.class).addAnnotatedClass(Ocuppant3.class).addAnnotatedClass(Teacher1.class).addAnnotatedClass(Student1.class);
             return configuration.buildSessionFactory();
         } catch (Throwable e) {
             logger.info("Error: " + e);

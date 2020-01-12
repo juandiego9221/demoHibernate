@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import pe.com.jdmm21.demojpa3.app.demojpa3.model3.Car;
 import pe.com.jdmm21.demojpa3.app.demojpa3.model3.Engine;
 import pe.com.jdmm21.demojpa3.app.demojpa3.model3.Room1;
+import pe.com.jdmm21.demojpa3.app.demojpa3.model3.Student1;
+import pe.com.jdmm21.demojpa3.app.demojpa3.model3.Teacher1;
 import pe.com.jdmm21.demojpa3.app.demojpa3.util.HibernateUtil;
 
 @RestController
@@ -34,6 +36,20 @@ public class DemoController3 {
     public ResponseEntity<?> testOTOB(){
         Session session = HibernateUtil.getSessionFactory().openSession();
         List<Engine> response = session.createQuery("select e from Engine e").getResultList();
+        return ResponseEntity.ok(response);
+    }
+
+    @GetMapping("/testHibernate4")
+    public ResponseEntity<?> testMTM(){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        List<Teacher1> response = session.createQuery("select e from Teacher1 e").getResultList();
+        return ResponseEntity.ok(response);
+    }
+
+    @GetMapping("/testHibernate5")
+    public ResponseEntity<?> testMTMStudent(){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        List<Student1> response = session.createQuery("select e from Student1 e").getResultList();
         return ResponseEntity.ok(response);
     }
     
